@@ -15,7 +15,8 @@ uint8_t comp2s(uint8_t value)
 }
 
 //SPIClass vspi;   //Instantiating an object named vspi with SPIClass
-void setup() {
+void setup() 
+{
   Serial.begin(115200);
   Serial.println("Getting Started....");
   pinMode(SPI_CS, OUTPUT);
@@ -60,13 +61,9 @@ void loop() {
   float value = static_cast<float>(value1); 
   Serial.println(value);*/
   value = static_cast<float>(valueL);
-  valueH = comp2s(valueL);
-  Serial.println(valueH, HEX);
-
+  //valueH = comp2s(valueL);
+  Serial.println(valueL, HEX);
   delay(100);
-
-
-  
 }
 /*void write_reg(int8_t addr, int8_t value)
 {
